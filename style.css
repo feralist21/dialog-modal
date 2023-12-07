@@ -1,0 +1,75 @@
+button {
+	display: block;
+
+	min-width: 100px;
+
+	margin: 0 auto 1rem;
+	padding: 0.5rem 1rem;
+
+	border: 0;
+
+	background-color: #b64646;
+
+	color: #fff;
+
+	cursor: pointer;
+}
+
+body.scroll-lock {
+	overflow: hidden;
+}
+
+dialog {
+	padding: 0;
+
+	border: 1px solid #b64646;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+dialog h1 {
+	margin: 0;
+	padding: 1rem;
+
+	font-size: 1.2rem;
+
+	background-color: #b64646;
+
+	color: #fff;
+
+	text-align: center;
+}
+
+.dialog-content {
+	padding: 1rem;
+
+	text-align: center;
+}
+
+dialog[open]::backdrop {
+	backdrop-filter: blur(2px);
+}
+
+dialog[open] {
+	animation: show 0.5s;
+}
+
+dialog.hide {
+	animation: hide 0.5s;
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+	to {
+		opacity: 0;
+	}
+}
